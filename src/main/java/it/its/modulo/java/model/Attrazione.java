@@ -1,4 +1,4 @@
-package it.its.modulo.java;
+package it.its.modulo.java.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +29,7 @@ public abstract class Attrazione {
     private final Tipo tipoAttrazione;
     private final int capacitaOraria;
     private final int altezzaMinimaCm;
-    private final boolean aperta;
+    private boolean aperta;
     private final AreaTematica areaTematica;
 
     public Attrazione(String nomeAttrazione, String codiceAttrazione, Tipo tipoAttrazione, int capacitaOraria, int altezzaMinimaCm, boolean aperta, AreaTematica areaTematica) {
@@ -66,12 +66,16 @@ public abstract class Attrazione {
         return aperta;
     }
 
+    public void setAperta(boolean aperta) {
+        this.aperta = aperta;
+    }
+
     public AreaTematica getAreaTematica() {
         return areaTematica;
     }
-    protected abstract String getDescrzioneCompleta();
+    public abstract String getDescrzioneCompleta();
 
-    protected abstract int calcolaTempoAttesaMedioU(int personeInCoda);
+    public abstract int calcolaTempoAttesaMedio(int personeInCoda);
 
     @Override
     public boolean equals(Object obj) {

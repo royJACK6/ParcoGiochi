@@ -1,4 +1,4 @@
-package it.its.modulo.java;
+package it.its.modulo.java.model;
 
 import java.time.Duration;
 import java.time.LocalTime;
@@ -39,7 +39,7 @@ public class Spettacolo extends Attrazione{
     }
 
     @Override
-    public int calcolaTempoAttesaMedioU(int personeInCoda) {
+    public int calcolaTempoAttesaMedio(int personeInCoda) {
         int prossimoSpettacoloDisponibile = personeInCoda / this.postiASedere;
         LocalTime orarioAttuale = LocalTime.now();
         List<LocalTime> prossimoSpettacolo = this.orariInizio

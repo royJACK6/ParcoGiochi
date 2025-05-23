@@ -1,4 +1,4 @@
-package it.its.modulo.java;
+package it.its.modulo.java.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,14 +31,12 @@ public class AreaTematica {
     public boolean equals(Object o) {
         if (!(o instanceof AreaTematica that)) return false;
 
-        return Objects.equals(nomeArea, that.nomeArea) && Objects.equals(descrizione, that.descrizione);
+        return Objects.equals(nomeArea, that.nomeArea);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hashCode(nomeArea);
-        result = 31 * result + Objects.hashCode(descrizione);
-        return result;
+        return Objects.hashCode(nomeArea);
     }
 
     @Override
@@ -49,8 +47,11 @@ public class AreaTematica {
                 '}';
     }
 
-
-    public void aggiungiAttrazione(Attrazione attrazione){
+    public void aggiungiAttrazione(Attrazione attrazione) {
         attrazioneList.add(attrazione);
+    }
+
+    public void rimuoviAttrazione(Attrazione attrazione) {
+        attrazioneList.remove(attrazione);
     }
 }

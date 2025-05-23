@@ -1,0 +1,3 @@
+PercorsoVisitatori = C:\Users\A872\IdeaProjects\gestione-parco-divertimenti\visitatori.json
+PercorsoBiglietti = C:\Users\A872\IdeaProjects\gestione-parco-divertimenti\biglietti.json
+PercorsoAttrazioni = C:\Users\A872\IdeaProjects\gestione-parco-divertimenti\attrazioni.json

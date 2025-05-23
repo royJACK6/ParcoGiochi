@@ -1,4 +1,4 @@
-package it.its.modulo.java;
+package it.its.modulo.java.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -49,12 +49,12 @@ public class PuntoRistoro extends Attrazione {
     }
 
     @Override
-    protected String getDescrzioneCompleta() {
+    public String getDescrzioneCompleta() {
         return this.getNomeAttrazione() + " (" + this.getAreaTematica().getDescrizione() + ")";
     }
 
     @Override
-    protected int calcolaTempoAttesaMedioU(int personeInCoda) {
+    public int calcolaTempoAttesaMedio(int personeInCoda) {
         return personeInCoda / getCapacitaOraria();
     }
 
